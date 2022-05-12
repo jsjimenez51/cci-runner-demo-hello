@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  runner:
+    machine: true
+    resource_class: jsjimenez51/k8s-class
+    steps:
+      - run: echo "Hi I'm on Runners!"
+
+workflows:
+  run:
+    jobs:
+      - runner
